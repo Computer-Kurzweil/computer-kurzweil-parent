@@ -1192,7 +1192,7 @@
             </properties>
             <build>
                 <finalName>${project.artifactId}</finalName>
-                <defaultGoal>clean package</defaultGoal>
+                <defaultGoal>clean install</defaultGoal>
             </build>
         </profile>
 
