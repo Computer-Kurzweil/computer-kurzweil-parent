@@ -126,6 +126,7 @@
             <url>https://repo.adobe.com/nexus/content/repositories/public/</url>
         </repository>
     </repositories>
+
     <pluginRepositories>
         <pluginRepository>
             <id>jcenter</id>
@@ -584,6 +585,7 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -597,6 +599,7 @@
             <type>maven-plugin</type>
             <exclusions>
                 <exclusion>
+                    <!-- TODO -->
                     <groupId>com.jcraft</groupId>
                     <artifactId>jsch</artifactId>
                 </exclusion>
