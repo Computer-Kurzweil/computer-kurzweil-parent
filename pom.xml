@@ -26,7 +26,7 @@
 
     <distributionManagement>
         <site>
-            <id>simulatedevolution.local</id>
+            <id>computer-kurzweil-parent.local</id>
             <url>file://${user.home}/public_html/java/computer-kurzweil-parent/</url>
         </site>
         <snapshotRepository>
