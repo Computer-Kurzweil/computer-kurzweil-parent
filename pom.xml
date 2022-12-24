@@ -1192,7 +1192,7 @@
             </properties>
             <build>
                 <finalName>${project.artifactId}</finalName>
-                <defaultGoal>clean package exec:java</defaultGoal>
+                <defaultGoal>clean package</defaultGoal>
             </build>
         </profile>
 
@@ -1206,8 +1206,8 @@
             </properties>
             <build>
                 <finalName>${project.artifactId}</finalName>
-                <defaultGoal>clean dependency:resolve dependency:resolve-plugins dependency:sources install site
-                    site:deploy exec:java
+                <defaultGoal>
+                    clean dependency:resolve dependency:resolve-plugins dependency:sources install site site:deploy
                 </defaultGoal>
             </build>
         </profile>
@@ -1222,8 +1222,8 @@
             </properties>
             <build>
                 <finalName>${project.artifactId}</finalName>
-                <defaultGoal>clean dependency:resolve dependency:resolve-plugins dependency:sources install site
-                    site:deploy
+                <defaultGoal>
+                    clean dependency:resolve dependency:resolve-plugins dependency:sources install site site:deploy
                 </defaultGoal>
             </build>
         </profile>
