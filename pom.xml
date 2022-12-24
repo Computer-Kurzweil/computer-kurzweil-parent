@@ -124,6 +124,11 @@
             <name>AdobePublic Repository</name>
             <url>https://repo.adobe.com/nexus/content/repositories/public/</url>
         </repository>
+        <repository>
+            <id>libs-release-local-woehlke-org</id>
+            <name>woehlke.org</name>
+            <url>https://java.woehlke.org/libs-release-local/</url>
+        </repository>
     </repositories>
 
     <pluginRepositories>
