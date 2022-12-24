@@ -1,7 +1,5 @@
 # computer-kurzweil-parent
 
-![Java CI with Maven](https://github.com/Computer-Kurzweil/cyclic-cellular-automaton/workflows/Java%20CI%20with%20Maven/badge.svg)
-
 **parent pom for all computer kurzweil maven projects**
 
 ## Abstract
