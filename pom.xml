@@ -1140,11 +1140,6 @@
                         <excludeRoot>target</excludeRoot>
                     </excludeRoots>
                 </configuration>
-                <dependecies>
-                    <dependency>
-
-                    </dependency>
-                </dependecies>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
