@@ -9,7 +9,7 @@
 
     <name>Computer Kurzweil Parent</name>
     <description>parent pom for all computer kurzweil maven projects</description>
-    <url>https://java.woehlke.org/computer-kurzweil-parent</url>
+    <url>https://java.woehlke.org/kurzweil/computer-kurzweil-parent</url>
     <inceptionYear>2022</inceptionYear>
 
     <scm>
@@ -27,7 +27,7 @@
     <distributionManagement>
         <site>
             <id>computer-kurzweil-parent.local</id>
-            <url>file://${user.home}/public_html/java/computer-kurzweil-parent/</url>
+            <url>file://${user.home}/public_html/java/kurzweil/computer-kurzweil-parent/</url>
         </site>
         <snapshotRepository>
             <id>snapshots</id>
@@ -921,6 +921,13 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-pmd-plugin</artifactId>
                     <version>${version.maven-pmd-plugin}</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>net.sourceforge.pmd</groupId>
+                            <artifactId>pmd</artifactId>
+                            <version>${version.maven-pmd-plugin.pmd}</version>
+                        </dependency>
+                    </dependencies>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -1133,6 +1140,11 @@
                         <excludeRoot>target</excludeRoot>
                     </excludeRoots>
                 </configuration>
+                <dependecies>
+                    <dependency>
+
+                    </dependency>
+                </dependecies>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
