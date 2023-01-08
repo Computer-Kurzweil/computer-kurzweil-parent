@@ -242,7 +242,7 @@
         <version.maven-jxr-plugin>3.3.0</version.maven-jxr-plugin>
         <version.maven-pmd-plugin>3.19.0</version.maven-pmd-plugin>
         <version.maven-pmd-plugin.pmd>6.53.0</version.maven-pmd-plugin.pmd>
-        <version..maven-pmd-plugin.jcommander>1.82</version..maven-pmd-plugin.jcommander>
+        <version.maven-pmd-plugin.jcommander>1.82</version.maven-pmd-plugin.jcommander>
         <version.spotbugs-maven-plugin>4.7.3.0</version.spotbugs-maven-plugin>
         <version.maven-surefire-report-plugin>3.0.0-M7</version.maven-surefire-report-plugin>
         <version.asciidoctor-maven-plugin>3.0.0-M7</version.asciidoctor-maven-plugin>
