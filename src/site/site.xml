@@ -25,7 +25,7 @@
         <breadcrumbs>
             <item name="Thomas Woehlke on GitHub" href="https://github.com/thomaswoehlke" />
             <item name="Computer-Kurzweil Group on GitHub" href="https://github.com/Computer-Kurzweil/" />
-            <item name="Fork this on GitHub" href="https://github.com/Computer-Kurzweil/computer_kurzweil/" />
+            <item name="Fork this on GitHub" href="https://github.com/Computer-Kurzweil/computer-kurzweil-parent/" />
             <item name="parent pom for all computer kurzweil maven projects" href="index.html" />
         </breadcrumbs>
         <menu name="Overview" inherit="top">
@@ -42,9 +42,9 @@
         <menu name="Progress" inherit="bottom">
             <item name="CHANGELOG" href="CHANGELOG.html" />
             <item name="TODO" href="TODO.html" />
-            <item name="Github: Issues" href="https://github.com/Computer-Kurzweil/computer_kurzweil/issues/" />
-            <item name="Github: Milestones" href="https://github.com/Computer-Kurzweil/computer_kurzweil/milestones" />
-            <item name="Github: Releases" href="https://github.com/Computer-Kurzweil/computer_kurzweil/releases/" />
+            <item name="Github: Issues" href="https://github.com/Computer-Kurzweil/computer-kurzweil-parent/issues/" />
+            <item name="Github: Milestones" href="https://github.com/Computer-Kurzweil/computer-kurzweil-parent/milestones" />
+            <item name="Github: Releases" href="https://github.com/Computer-Kurzweil/computer-kurzweil-parent/releases/" />
         </menu>
         <menu name="Maven Reports" ref="reports" inherit="bottom"/>
     </body>
