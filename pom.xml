@@ -8,7 +8,12 @@
     <packaging>pom</packaging>
 
     <name>Computer Kurzweil Parent</name>
-    <description>parent pom for all computer kurzweil maven projects</description>
+    <description>
+        parent pom for all computer kurzweil maven projects.
+        Computer Science Infotainment.
+        A Tribute to "Computer Kurzweil" Article Series in Spektrum der Wissenschaft
+        the german release of Scientific American
+    </description>
     <url>https://java.woehlke.org/kurzweil/computer-kurzweil-parent</url>
     <inceptionYear>2022</inceptionYear>
 
