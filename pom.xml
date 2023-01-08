@@ -30,13 +30,13 @@
             <url>file://${user.home}/public_html/java/kurzweil/computer-kurzweil-parent/</url>
         </site>
         <snapshotRepository>
-            <id>snapshots</id>
-            <name>tw-thinkpad-snapshots</name>
+            <id>repository.woehlke.org-snapshots</id>
+            <name>repository.woehlke.org-snapshots</name>
             <url>file://${user.home}/public_html/java/libs-snapshots-local/</url>
         </snapshotRepository>
         <repository>
-            <id>central</id>
-            <name>tw-thinkpad-releases</name>
+            <id>repository.woehlke.org-releases</id>
+            <name>repository.woehlke.org-releases</name>
             <url>file://${user.home}/public_html/java/libs-release-local/</url>
         </repository>
     </distributionManagement>
@@ -128,6 +128,13 @@
             <id>repository.woehlke.org-releases</id>
             <name>repository.woehlke.org</name>
             <url>https://repository.woehlke.org/releases/</url>
+            <releases></releases>
+        </repository>
+        <repository>
+            <id>repository.woehlke.org-snapshots</id>
+            <name>repository.woehlke.org</name>
+            <url>https://repository.woehlke.org/snapshots/</url>
+            <snapshots></snapshots>
         </repository>
     </repositories>
 
