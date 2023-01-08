@@ -125,9 +125,9 @@
             <url>https://repo.adobe.com/nexus/content/repositories/public/</url>
         </repository>
         <repository>
-            <id>libs-release-local-woehlke-org</id>
-            <name>woehlke.org</name>
-            <url>https://java.woehlke.org/libs-release-local/</url>
+            <id>repository.woehlke.org-releases</id>
+            <name>repository.woehlke.org</name>
+            <url>https://repository.woehlke.org/releases/</url>
         </repository>
     </repositories>
 
@@ -192,6 +192,11 @@
             <name>AdobePublic Repository</name>
             <url>https://repo.adobe.com/nexus/content/repositories/public/</url>
         </pluginRepository>
+        <pluginRepository>
+            <id>repository.woehlke.org-releases</id>
+            <name>repository.woehlke.org</name>
+            <url>https://repository.woehlke.org/releases/</url>
+        </pluginRepository>
     </pluginRepositories>
 
     <properties>
@@ -204,6 +209,7 @@
 
         <!-- SCM and Releasing with Maven -->
         <version.maven.scm>1.13.0</version.maven.scm>
+        <version.maven.scm.jsch>0.1.55</version.maven.scm.jsch>
         <version.maven-release-plugin>3.0.0-M7</version.maven-release-plugin>
 
         <!-- Maven plugins -->
@@ -235,7 +241,8 @@
         <version.maven-checkstyle-plugin.checkstyle>10.5.0</version.maven-checkstyle-plugin.checkstyle>
         <version.maven-jxr-plugin>3.3.0</version.maven-jxr-plugin>
         <version.maven-pmd-plugin>3.19.0</version.maven-pmd-plugin>
-        <version.maven-pmd-plugin.pmd>6.52.0</version.maven-pmd-plugin.pmd>
+        <version.maven-pmd-plugin.pmd>6.53.0</version.maven-pmd-plugin.pmd>
+        <version..maven-pmd-plugin.jcommander>1.82</version..maven-pmd-plugin.jcommander>
         <version.spotbugs-maven-plugin>4.7.3.0</version.spotbugs-maven-plugin>
         <version.maven-surefire-report-plugin>3.0.0-M7</version.maven-surefire-report-plugin>
         <version.asciidoctor-maven-plugin>3.0.0-M7</version.asciidoctor-maven-plugin>
@@ -289,6 +296,11 @@
                 <scope>provided</scope>
             </dependency>
             <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>2.11.0</version>
+            </dependency>
+            <dependency>
                 <groupId>org.apache.maven.scm</groupId>
                 <artifactId>maven-scm-provider-svnexe</artifactId>
                 <version>${version.maven.scm}</version>
@@ -302,11 +314,6 @@
                 <groupId>org.apache.maven.scm</groupId>
                 <artifactId>maven-scm-provider-gitexe</artifactId>
                 <version>${version.maven.scm}</version>
-            </dependency>
-            <dependency>
-                <groupId>commons-io</groupId>
-                <artifactId>commons-io</artifactId>
-                <version>2.11.0</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.maven.scm</groupId>
@@ -466,6 +473,12 @@
                 <scope>provided</scope>
             </dependency>
             <dependency>
+                <groupId>com.jcraft</groupId>
+                <artifactId>jsch</artifactId>
+                <version>${version.maven.scm.jsch}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
                 <version>${version.maven-site-plugin}</version>
@@ -491,6 +504,18 @@
                 <artifactId>maven-checkstyle-plugin</artifactId>
                 <version>${version.maven-checkstyle-plugin}</version>
                 <type>maven-plugin</type>
+                <scope>provided</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.puppycrawl.tools</groupId>
+                        <artifactId>checkstyle</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>com.puppycrawl.tools</groupId>
+                <artifactId>checkstyle</artifactId>
+                <version>${version.maven-checkstyle-plugin.checkstyle}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -536,7 +561,7 @@
             <dependency>
                 <groupId>com.beust</groupId>
                 <artifactId>jcommander</artifactId>
-                <version>1.82</version>
+                <version>${version.maven-pmd-plugin.jcommander}</version>
             </dependency>
             <dependency>
                 <groupId>net.sourceforge.pmd</groupId>
@@ -825,6 +850,10 @@
             <type>maven-plugin</type>
         </dependency>
         <dependency>
+            <groupId>com.puppycrawl.tools</groupId>
+            <artifactId>checkstyle</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.github.spotbugs</groupId>
             <artifactId>spotbugs-maven-plugin</artifactId>
             <type>maven-plugin</type>
@@ -997,6 +1026,25 @@
                             <groupId>net.sourceforge.pmd</groupId>
                             <artifactId>pmd-core</artifactId>
                             <version>${version.maven-pmd-plugin.pmd}</version>
+                            <scope>provided</scope>
+                        </dependency>
+                        <dependency>
+                            <groupId>net.sourceforge.pmd</groupId>
+                            <artifactId>pmd-java</artifactId>
+                            <version>${version.maven-pmd-plugin.pmd}</version>
+                            <scope>provided</scope>
+                        </dependency>
+                        <dependency>
+                            <groupId>net.sourceforge.pmd</groupId>
+                            <artifactId>pmd-javascript</artifactId>
+                            <version>${version.maven-pmd-plugin.pmd}</version>
+                            <scope>provided</scope>
+                        </dependency>
+                        <dependency>
+                            <groupId>net.sourceforge.pmd</groupId>
+                            <artifactId>pmd-jsp</artifactId>
+                            <version>${version.maven-pmd-plugin.pmd}</version>
+                            <scope>provided</scope>
                         </dependency>
                     </dependencies>
                 </plugin>
@@ -1121,15 +1169,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <!-- TODO -->
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <configuration>
-                    <mainClass>org.woehlke.computer.kurzweil.simulated.evolution.SimulatedEvolutionApplication
-                    </mainClass>
-                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -1289,7 +1328,12 @@
             <build>
                 <finalName>${project.artifactId}</finalName>
                 <defaultGoal>
-                    clean dependency:resolve dependency:resolve-plugins dependency:sources install site site:deploy
+                    clean
+                    dependency:purge-local-repository dependency:resolve dependency:resolve-plugins dependency:sources
+                    install
+                    source:jar source:test-jar javadoc:jar javadoc:test-jar
+                    spring-boot:repackage
+                    site site:jar site:deploy
                 </defaultGoal>
             </build>
         </profile>
