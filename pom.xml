@@ -852,6 +852,7 @@
         <dependency>
             <groupId>com.puppycrawl.tools</groupId>
             <artifactId>checkstyle</artifactId>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.github.spotbugs</groupId>
@@ -1332,7 +1333,6 @@
                     dependency:purge-local-repository dependency:resolve dependency:resolve-plugins dependency:sources
                     install
                     source:jar source:test-jar javadoc:jar javadoc:test-jar
-                    package
                     site site:jar site:deploy
                 </defaultGoal>
             </build>
